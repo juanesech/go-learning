@@ -4,31 +4,17 @@ import (
   "fmt"
   "log"
   L "./lib"
-  "strconv"
-  "os"
 )
 
 func main()  {
-  var sum int = 2020
-  lines, err := L.ReadLines("input.txt")
+  var sum = 2020
+  input_content, err := L.ReadLines("input.txt")
+  input := L.ArrayToInt(input_content)
+  result_i2 := L.Iterator(input, 2, sum)
+  result_i3 := L.Iterator(input, 3, sum)
   if err != nil {
       log.Fatalf("readLines: %s", err)
   }
-  for i, l := range lines {
-    line, err := strconv.Atoi(l)
-    if err != nil {
-        log.Fatalf("readLines: %s", i, err)
-    }
-    for a, lin := range lines {
-      li, err := strconv.Atoi(lin)
-      if err != nil {
-          log.Fatalf("readLines: %s", a, err)
-      }
-      if line+li == sum {
-        fmt.Println("Values: ", line, li)
-        fmt.Println("Result: ", line*li)
-        os.Exit(2)
-      }
-    }
-  }
+  fmt.Println("2 Numbers", result_i2)
+  fmt.Println("3 Numbers", result_i3)
 }
