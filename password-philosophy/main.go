@@ -10,11 +10,15 @@ import (
 
 func main() {
 	fileContent, err := U.ReadLines("input.txt")
+	var counter int
 	if err != nil {
 		log.Fatalf("readLines: %s", err)
 	}
 	for _, value := range fileContent {
 		formatedValue := L.Format(value)
-		fmt.Println(formatedValue)
+		if L.PassValidator(formatedValue) {
+			counter++
+		}
 	}
+	fmt.Println("Count: ", counter)
 }
