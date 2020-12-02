@@ -1,19 +1,16 @@
 package lib
 
-import (
-	"fmt"
-)
-
-func Iterator(in []int, iter int, sumVal int) []int {
+func Iterator(in []int, iter int, sumVal int) ([]int, int) {
 	var values []int
+	var product int
 	switch iter {
 	case 2:
 		for i := range in {
 			for a := range in {
 			  if in[i]+in[a] == sumVal {
 				values = append(values, in[i], in[a])
-				fmt.Println("Result: ", in[i]*in[a])
-				return values
+				product = in[i]*in[a]
+				return values, product
 			  }
 			}
 		}
@@ -23,12 +20,12 @@ func Iterator(in []int, iter int, sumVal int) []int {
 				for b := range in {
 					if in[i]+in[a]+in[b] == sumVal {
 						values = append(values, in[i], in[a], in[b])
-						fmt.Println("Result: ", in[i]*in[a]*in[b])
-						return values
+						product = in[i]*in[a]*in[b]
+						return values, product
 					  }
 				}
 			}
 		}
 	}
-	return values
+	return values, product
 }
