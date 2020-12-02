@@ -1,8 +1,7 @@
 package lib
 
-/*
-	Iterator function
-*/
+
+//Iterator function
 func Iterator(in []int, iter int, sumVal int) ([]int, int) {
 	var values []int
 	var product int

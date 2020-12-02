@@ -5,9 +5,9 @@ import (
     "os"
 )
 
-/*
-	Get string array from input file
-*/
+
+//ReadLines Get string array from input file
+
 func ReadLines(path string) ([]string, error) {
     file, err := os.Open(path)
     if err != nil {

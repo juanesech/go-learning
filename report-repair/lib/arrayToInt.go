@@ -5,9 +5,9 @@ import (
 	"log"
 )
 
-/*
-	Convert string array to int one
-*/
+
+//Convert string array to int one
+
 func ArrayToInt(array []string) []int {
 	var intArray []int
 	for i, it := range array {
