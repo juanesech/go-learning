@@ -8,8 +8,8 @@ import (
 
 func main()  {
   var sum = 2020
-  input_content, err := L.ReadLines("input.txt")
-  input := L.ArrayToInt(input_content)
+  fileContent, err := L.ReadLines("input.txt")
+  input := L.ArrayToInt(fileContent)
   i2Numbers, i2_product := L.Iterator(input, 2, sum)
   i3Numbers, i3_product := L.Iterator(input, 3, sum)
   if err != nil {
