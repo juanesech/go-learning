@@ -1,0 +1,2 @@
+# go-learning
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec6fd4066b774413bfd3c4c8aa2391e0)](https://app.codacy.com/gh/juanesech/go-learning?utm_source=github.com&utm_medium=referral&utm_content=juanesech/go-learning&utm_campaign=Badge_Grade)
