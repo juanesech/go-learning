@@ -6,7 +6,7 @@ import (
 )
 
 
-//ArrayToInt function Convert string array to int one
+//ArrayToInt function
 func ArrayToInt(array []string) []int {
 	var intArray []int
 	for i := range array {
