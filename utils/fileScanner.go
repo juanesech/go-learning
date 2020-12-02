@@ -5,6 +5,7 @@ import (
 	"os"
 )
 
+// ReadLines function can parse an input file to a string slice
 func ReadLines(path string) ([]string, error) {
 	file, err := os.Open(path)
 	if err != nil {

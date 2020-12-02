@@ -17,5 +17,4 @@ func main() {
 		formatedValue := L.Format(value)
 		fmt.Println(formatedValue)
 	}
-	fmt.Println("Working...")
 }
